@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantangan Dari Fanny</title>
+    <style>
+        table {
+            background-color: #31475c;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        div {
+            color: white;
+            padding-bottom: 20px;
+            padding-top: 0px;
+        }
+
+        input {
+            border-radius: 10px;
+        }
+
+        select {
+            border-radius: 10px;
+            width: 110px;
+        }
+
+        span {
+            background-color: white;
+            width: 100px;
+        }
+    </style>
+
+<script>
+    function Kalkulator () {
+        let angka1 = document.getElementById("angka1");
+        let angka2 = document.getElementById("angka2");
+        let operator = document.getElementById("operator");
+        let hitung = document.getElementById("hitung");
+        let hasil1 = parseInt(angka1.value) +  parseInt(angka2.value);
+        let hasil2 = parseInt(angka1.value) -  parseInt(angka2.value);
+        let hasil3 = parseInt(angka1.value) *  parseInt(angka2.value);
+        let hasil4 = parseInt(angka1.value) /  parseInt(angka2.value);
+
+        if (operator.value == "+") {
+            alert(hasil1);
+        }
+        else if (operator.value == "-") {
+            alert(hasil2);
+        }
+        else if (operator.value == "*") {
+            alert(hasil3);
+        }
+        else if (operator.value == "/") {
+            alert(hasil4);
+        }
+    }    
+</script>
+
+</head>
+<body>
+    <table border="0" align="center">
+        <tr>
+            <td>
+                <div>
+                    KALKULATOR
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="angka1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="angka2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">x</option>
+                    <option value="/">&#247;</option>
+                </select>
+                <input type="button" id="hitung" value="Hitung" style="background-color: red; color: white;" onclick="Kalkulator()">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
